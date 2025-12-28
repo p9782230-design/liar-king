@@ -400,9 +400,7 @@ io.on("connection", (socket) => {
 
 app.get("/", (req, res) => res.send("Server OK"));
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 server.listen(PORT, "0.0.0.0", () => {
   console.log("listening on", PORT);
 });
-
-
